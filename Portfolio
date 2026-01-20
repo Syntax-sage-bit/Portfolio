@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divyansh Portfolio</title>
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #1e1e2f;
+  color: #fff;
+  padding: 10px 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff6b6b;
+}
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e1e2f;
+}
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.skill {
+  background-color: #ff6b6b;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.project-card {
+  background-color: #fff;
+  padding: 20px;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.project-card a {
+  text-decoration: none;
+  color: #ff6b6b;
+  margin-right: 10px;
+}
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input, textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  padding: 12px;
+  border: none;
+  background-color: #ff6b6b;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #e55a5a;
+}
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1e1e2f;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project-card {
+    width: 45%;
+  }
+
+  .skills-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  .project-card {
+    width: 280px;
+  }
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Divyansh Bhadauriya</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a passionate frontend developer and student who enjoys building interactive and functional web projects using HTML, CSS, and JavaScript. I focus on creating clean UI, writing logical code, and turning ideas into real-world applications. Through continuous practice and project-based learning, I am improving my skills and exploring modern web development concepts.</p>
+  </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">python</div>
+      <div class="skill">node.js(basic backend)</div>
+      <div class="skill">Responsive Design</div>
+      <div class="skill">Git & GitHub</div>
+      <div class="skill">netlify deployment</div>
+    </div>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>To-Do App</h3>
+        <p>Interactive To-Do List with add, delete, mark done, and localStorage.</p>
+        <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Calculator</h3>
+        <p>Basic + scientific calculator with responsive design.</p>
+        <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Weather App</h3>
+        <p>Fetches live weather data using OpenWeatherMap API.</p>
+        <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="project-card">
+      <ul>
+        <li>Email - <a href="">divyanshbhadauriya14@gmail.com</a></li>
+      </ul>
+    </div>
+  </section>
+  <footer>
+    <p>© 2026 Divyansh Bhadauriya. All rights reserved.</p>
+  </footer>
+</body>
+</html>
